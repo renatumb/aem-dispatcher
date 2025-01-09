@@ -23,13 +23,13 @@ https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/c
 The main file is the Dockerfile which contains necessary configurations to create an docker image 
 
 ```bash
-  docker build -t  myImageWithAEMDisptacher .
+  docker build -t   my-image-with-aem-dispatcher .
 ```
 
 To start the recently built image 
 
 ```bash
-  docker run -dit --name aem-dispatcher-container -p 80:80 -v REPLACE_BY_ABSOLUTE_PATH\htdocs:/usr/local/apache2/htdocs aem-dispatcher-image
+  docker run -dit --name aem-dispatcher-container -p 80:80 -v REPLACE_BY_ABSOLUTE_PATH\htdocs:/usr/local/apache2/htdocs my-image-with-aem-dispatcher
 ```
 
 So After this, once you hit localhost:80, all the content from publish will be served thru apache httpd
